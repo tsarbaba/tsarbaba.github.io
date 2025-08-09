@@ -1,37 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>OLGA BABA</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Мои проекты</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Левое меню */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Правая часть — галерея */
     .gallery {
       margin-left: 220px;
       padding: 40px;
-      padding-top: 60px; /* ← добавь сюда */
+      padding-top: 60px; /* отступ сверху */
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .project {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+
+    .project h3 {
+      margin-top: 10px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <aside class="sidebar">
-    <nav>
-      <ul>
-        <li><a href="#art">Art Projects</a></li>
-        <li><a href="#photo">Photo Projects</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-      </ul>
-    </nav>
-  </aside>
 
-  <main class="gallery">
-    <h1>Selected Works</h1>
-    <div class="grid">
-      <a href="project1.html"><img src="project1.jpg" alt="Project 1"></a>
-      <a href="project2.html"><img src="project2.jpg" alt="Project 2"></a>
-      <a href="project3.html"><img src="project3.jpg" alt="Project 3"></a>
-      <!-- Add more projects -->
+  <!-- Левое меню -->
+  <div class="sidebar">
+    <h2>Меню</h2>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Обо мне</a></li>
+      <li><a href="#">Проекты</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </div>
+
+  <!-- Галерея проектов -->
+  <div class="gallery">
+    <div class="project">
+      <img src="https://via.placeholder.com/200x150" alt="Проект 1">
+      <h3>Проект 1</h3>
     </div>
-  </main>
+    <div class="project">
+      <img src="https://via.placeholder.com/200x150" alt="Проект 2">
+      <h3>Проект 2</h3>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/200x150" alt="Проект 3">
+      <h3>Проект 3</h3>
+    </div>
+    <!-- Добавь больше проектов по желанию -->
+  </div>
+
 </body>
 </html>
