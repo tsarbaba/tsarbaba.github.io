@@ -1,30 +1,63 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Галерея художника</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <aside class="sidebar">
-    <nav>
-      <ul>
-        <li><a href="#art">Art Projects</a></li>
-        <li><a href="#photo">Photo Projects</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-      </ul>
-    </nav>
-  </aside>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: white;
+  display: flex;
+}
 
-  <main class="gallery">
-    <h1>Мои работы</h1>
-    <div class="grid">
-      <a href="project1.html"><img src="project1.jpg" alt="Проект 1"></a>
-      <a href="project2.html"><img src="project2.jpg" alt="Проект 2"></a>
-      <a href="project3.html"><img src="project3.jpg" alt="Проект 3"></a>
-      <!-- Добавь больше проектов -->
-    </div>
-  </main>
-</body>
-</html>
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #0077cc;
+}
+
+.gallery {
+  margin-left: 220px;
+  padding: 40px;
+}
+
+.gallery h1 {
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.grid a img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.grid a:hover img {
+  transform: scale(1.05);
+}
