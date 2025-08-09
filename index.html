@@ -2,35 +2,29 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Ольга Шаповалова – Портфолио</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fffaf6;
-      color: #333;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 2em;
-      color: #7a1e6e;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+  <title>Галерея художника</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#art">Art Projects</a></li>
+        <li><a href="#photo">Photo Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-  <h1>Привет, я Оля</h1>
-
-  <p>Я художница и кураторка. Это мой сайт-портфолио. Здесь вы можете увидеть мои работы, выставки и проекты.</p>
-
-  <img src="example.jpg" alt="Пример работы">
-
-  <p>📧 Моя почта: <a href="mailto:olya@example.com">olya@example.com</a></p>
-
+  <main class="gallery">
+    <h1>Мои работы</h1>
+    <div class="grid">
+      <a href="project1.html"><img src="project1.jpg" alt="Проект 1"></a>
+      <a href="project2.html"><img src="project2.jpg" alt="Проект 2"></a>
+      <a href="project3.html"><img src="project3.jpg" alt="Проект 3"></a>
+      <!-- Добавь больше проектов -->
+    </div>
+  </main>
 </body>
 </html>
